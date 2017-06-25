@@ -80,7 +80,7 @@ $(document).ready(function() {
 	$("#callback").submit(function() {
 		$.ajax({
 			type: "GET",
-			url: "mail.php",
+			url: "libs/mail.php",
 			data: $("#callback").serialize()
 		}).done(function() {
 			alert("Спасибо за заявку!");
