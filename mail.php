@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 $recepient = "alex1111xxx@gmail.com";
 $sitename = "Сайт НАчисто";

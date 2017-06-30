@@ -1,3 +1,8 @@
+/* Временно прячем ссылки не существующих страниц*/
+.pricing-content a{
+  display: none;
+}
+
 
 /*Цвет Иконок*/.icon{
   fill:#5c7f95;
@@ -230,7 +235,7 @@ font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .call-box-text p{
   display: inline-block;
-  font-size: 4em;
+  font-size: 3.4em;
   margin:auto;
   font-weight: normal;
 }
@@ -244,6 +249,11 @@ font-family: 'Yanone Kaffeesatz', sans-serif;
   vertical-align: middle;
   white-space: nowrap;
   width: 250px;
+}
+.call{
+  max-width: 70px;
+  padding: 5px;
+  text-align: left;
 }
 
 /*Форма обратной связи*/
@@ -291,6 +301,9 @@ body textarea:required:valid {
     border-radius: 20px;
     text-align: center;
     font-size: 1.1em;
+}
+.pop_form input[type="text"]:hover{
+  border: #00e145 2px solid;
 }
 .pop_form button {
   background: #ffffff;
@@ -400,7 +413,45 @@ body textarea:required:valid {
   color: #00e145;
   transition: all 0.3s ease;
 }
+#window-1, #window-2, #window-3 {
+  max-width: 90%;
+  padding: 30px;
+  fill: #5c7f95;
+}
+.pricing-table:hover #window-1{
+  fill:#0094fe;
+}
+.pricing-table:hover #window-2{
+  fill:#0094fe;
+}
+.pricing-table:hover #window-3{
+  fill:#0094fe;
+}
 
+#home-cleaning, #flats-cleaning, #office-cleaning, #windows-cleaning {
+  max-width: 80%;
+  padding: 10px;
+  fill: #5c7f95;
+}
+.pricing-content .loc .loc-a a{
+  display: inline-block;
+}
+.pricing-content .loc .loc-a a:hover{
+  color: #00e145;
+  transition: all 0.3s ease; 
+}
+.pricing-table:hover #home-cleaning{
+  fill:#0094fe;
+}
+.pricing-table:hover #flats-cleaning{
+  fill:#0094fe;
+}
+.pricing-table:hover #office-cleaning{
+  fill:#0094fe;
+}
+.pricing-table:hover #windows-cleaning{
+  fill:#0094fe;
+}
 
 
 
@@ -524,10 +575,30 @@ svg {
   fill: currentColor;
 }
 
-
-
-
-
+/*Страница контактов*/
+.contacts {
+  display:block;
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+  height: 400px;
+  background-color: #fff; 
+}
+.contacts h2 {
+  font-size: 2.5em;
+}
+.contacts ul {
+  font-size: 1.5em;
+  text-align: left;
+}
+.contacts ul li{
+  padding: 5px;
+}
+.blue{
+  color:#0094fe;
+  font-weight: 500;
+  font-size: 1.3em;
+}
 
 
 
@@ -594,6 +665,9 @@ svg {
  #menu-btn{
   display: inline-block;
  }
+  .pricing-row {
+    font-size: 98%;
+  }
 }
 
 @media screen and (min-width: 1201px){
@@ -606,6 +680,7 @@ svg {
  .col-sm-7 {
     width: 58.33333333% ;
 }
+
 }
 @media screen and (max-width: 1200px){
   .call-box-text p {
@@ -616,7 +691,15 @@ svg {
     display: block;
     width: 100%;
   }
+  #window-1, #window-2, #window-3 {
+    max-width: 50%;
+  }
  } 
+ @media screen and (max-width: 991px){
+  #home-cleaning, #flats-cleaning, #office-cleaning, #windows-cleaning{
+    max-width: 50%
+  }
+ }
 
 @media screen and (max-width: 768px){
   #menu-btn{
@@ -632,12 +715,34 @@ svg {
   .call-box-content .call-box-button {
     width: 100%;
   }
+    .call-box-text h2 {
+    text-align: center;
+  }
 }
-@media screen and (max-width: 376px){
+@media screen and (max-width: 638px){
+  .call{
+    display: none;
+  }
+  }
+@media screen and (max-width: 480px){
   .logo>a>img{
     display: none;
   }
-
+  .call{
+    display: none;
+  }
+  .call-box-text h2 {
+    text-align: center;
+  }
+  .call-box-text p{
+    text-align: center;
+  }
+  #window-1, #window-2, #window-3 {
+    max-width: 90%;
+  }
+  #home-cleaning, #flats-cleaning, #office-cleaning, #windows-cleaning{
+    max-width: 70%
+  }
 }
 
 
